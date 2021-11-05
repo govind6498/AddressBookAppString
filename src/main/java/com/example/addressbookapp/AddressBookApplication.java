@@ -12,6 +12,7 @@ public class AddressBookApplication {
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(AddressBookApplication.class,args);
 		log.info("Address Book App Stated in {} Environment",context.getEnvironment().getProperty("environmen"));
+		log.info("Employee payroll DB User is {}", context.getEnvironment().getProperty("spring.datasource.username"));
 	}
 
 }
