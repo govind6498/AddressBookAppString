@@ -27,7 +27,7 @@ public class AddressBookService implements IAddressBookService {
 	@Override
 	public AddressBookData createAddressBookData(AddressBookDTO addressBookDTO) {
 		AddressBookData addressBookData =  null;
-		addressBookData = new AddressBookData(1,addressBookDTO);
+		addressBookData = new AddressBookData(addressBookList.size()+1,addressBookDTO);
 		addressBookList.add(addressBookData);
 		return addressBookData;
 	}
@@ -35,11 +35,12 @@ public class AddressBookService implements IAddressBookService {
 	@Override
 	public AddressBookData updateAddressBookData(int addId, AddressBookDTO addressBookDTO) {
 		AddressBookData addressBookData = this.getAddressBookDataById(addId);
-		addressBookData.setName("Himanshu");
-		addressBookData.setMobileNumber("9685743620");
-		addressBookData.setCity("Delhi");
-		addressBookData.setState("New Delhi");
-		addressBookData.setEmail("abc123@gmail.com");
+		addressBookData.setName(addressBookDTO.name);
+		addressBookData.setMobileNumber(addressBookDTO.moNumber);
+		addressBookData.setCity(addressBookDTO.city);
+		addressBookData.setState(addressBookDTO.state);
+		addressBookData.setEmail(addressBookDTO.email);
+		addressBookData.setZip(addressBookDTO.zip);
 		addressBookList.set(addId-1, addressBookData);
 		return addressBookData;
 	}
