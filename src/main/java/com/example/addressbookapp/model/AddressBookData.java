@@ -7,7 +7,7 @@ public class AddressBookData {
 	private String name;
 	private String moNumber;
 	private String city;
-	private long zip;
+	private String zip;
 	private String email;
 	private String state;
 	
@@ -29,19 +29,19 @@ public class AddressBookData {
 	public void setAddressBookId(int AddressBookId) {
 		this.addressBookId = addressBookId;
 	}
-	public String GetName() {
+	public String getName() {
 		return this.name;
 	}
 	public void setName(String name) {
 		this.name= name;
 	}
-	public String setMobileNumber() {
+	public String getMobileNumber() {
 		return moNumber;
 	}
 	public void setMobileNumber(String moNumber) {
 		this.moNumber = moNumber;
 	}
-	public String setCity() {
+	public String getCity() {
 		return this.city;
 	}
 	public void setCity(String city) {
@@ -51,12 +51,12 @@ public class AddressBookData {
 		return this.state;
 	}
 	public void setState(String state) {
-		this.state = state;
+		this.state=state;
 	}
-	public long getZip() {
+	public String getZip() {
 		return this.zip;
 	}
-	public void getZip(long zip) {
+	public void setZip(String zip) {
 		this.zip = zip;
 	}
 	public String getEmail() {
